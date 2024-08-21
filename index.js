@@ -14,7 +14,7 @@ const textToJson = () => {
 const jsonToStr = (arr) => {
   let str = "";
   for (i of arr) {
-    str += JSON.stringify(i, null, 2);
+    str += JSON.stringify(i);
   }
   return str;
 };
