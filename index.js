@@ -22,7 +22,7 @@ const jsonToStr = (arr) => {
 const getTodoSync = (id) => {
   const newData = textToJson();
   const finalData = newData.filter((item) => item.id === id);
-  return finalData[0];
+  return jsonToStr(finalData);
 };
 
 const createTodoSync = (todo) => {
