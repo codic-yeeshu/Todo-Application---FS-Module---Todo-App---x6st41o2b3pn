@@ -14,7 +14,7 @@ const textToJson = () => {
 const jsonToStr = (arr) => {
   let str = "";
   for (i of arr) {
-    str += JSON.stringify(i);
+    str += JSON.stringify(i, null, 2) + "\n";
   }
   return str;
 };
@@ -22,7 +22,7 @@ const jsonToStr = (arr) => {
 const getTodoSync = (id) => {
   const newData = textToJson();
   const finalData = newData.filter((item) => item.id === id);
-  return jsonToStr(finalData);
+  return JSON.stringify(finalData[0]);
 };
 
 const createTodoSync = (todo) => {
